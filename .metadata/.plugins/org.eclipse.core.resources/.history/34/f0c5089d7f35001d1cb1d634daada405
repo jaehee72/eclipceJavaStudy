@@ -1,0 +1,11 @@
+package java_study2.co.kr.jungbu;
+
+public class L12Lamda {
+
+	public static void main(String[] args) {
+		//javscript 람다식 : function(){}함수 => 프로토 타입(타입), class(문법적 설탕 ==function), ()=>{}람다식 함수(타입이 존재하지않는)
+		//function Calc(a,b) {this.a=a; this.b=b, this.sum=function(){}} let calc= new Calc();
+		//java
+	}
+
+}

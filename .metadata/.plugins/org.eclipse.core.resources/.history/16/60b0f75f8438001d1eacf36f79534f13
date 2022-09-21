@@ -1,0 +1,34 @@
+package java_study2.co.kr.jungbu;
+public class L19StreamAPIEx5 {
+	class Student{
+		//public (어디서든) protec ted(상속) default(같은패키지안에서 ) private(클래스내부에서)
+		private String name;
+		private boolean isMale;
+		private int hak;
+		private int ban;
+		private int score;
+		public Student(String name,boolean isMale,int hak,int ban,int score) {
+			this.name=name;
+			this.isMale=isMale;
+			this.hak=hak;
+			this.ban=ban;
+			this.score=score;
+		}
+		
+		//캡슐화에 대해 아는 마ㄴ큼 설명하라, vo dto 가 무엇인가요 ? 디자인 패턴 => 이거 3개는 같이 연결해서생각하면 된다 
+		public String getName() {return name;}
+		public boolean isMale() {return isMale;}
+		public int getHak() {return hak;}
+		public int getBan() {return ban;}
+		public int getScore() {return score;}
+		
+		
+		@Override
+		public String toString() {
+			return "{"+name +","+isMale+","+hak+","+ban+","+ score+"}";
+		}
+	}
+	public static void mian(String[]args) {
+		
+	}
+}

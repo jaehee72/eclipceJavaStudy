@@ -1,0 +1,32 @@
+package java_study2.co.kr.jungbu;
+
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JTextArea;
+class TextEditor extends JFrame{
+	JTextArea ta;
+	JMenuBar mb;
+	JMenu menu;
+	JMenuItem miNew;
+	JMenuItem miOpen;
+	JMenuItem miSave;
+	JMenuItem miExit;
+	public TextEditor() {
+		
+	}
+	
+}
+public class L24TextEditorApp {
+
+	public static void main(String[] args) {
+//		JFrame f =new JFrame();
+//		f.setBounds(2000,10,400,400);
+//		f.setVisible(true);
+		TextEditor editor = new TextEditor();
+		editor.setBounds(0,0,400,400);
+		editor.setVisible(true);
+	}
+
+}

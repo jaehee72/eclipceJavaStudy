@@ -1,0 +1,19 @@
+package java_study2.co.kr.jungbu;
+
+import javax.swing.JFrame;
+
+public class L11Swing {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JFrame frame = new JFrame("swing frme");
+		JButton btn = new JButton("버튼 component");
+		JButton btn2 = new JButton("버튼2 component");
+		
+		frame.add(btn);
+		frame.add(btn2);
+		frame.setBounds(100,100,300,100);
+		frame.setVisible(true);
+	}
+
+}

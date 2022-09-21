@@ -1,0 +1,41 @@
+package java_study2.co.kr.jungbu;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class L15StreamAPI {
+
+	public static void main(String[] args) {
+
+		Integer n = new Integer(500);
+		System.out.println(10+n);
+		System.out.println(10+n.intValue());
+
+		List<Integer> numList = new ArrayList<Integer>();
+		numList.add(500);
+		numList.add(55);
+		numList.add(5);
+		numList.add(null);
+		numList.add(555);
+		numList.add(1);
+		numList.add(3);
+		numList.add(-300);
+		//외부 반복문은 내부 반복문 보다 조건을 파악하기 어렵다!
+		int sum=0;
+		for(Integer num : numList) {
+			if(num!=null) {
+				sum+=num;
+			}
+		}
+		//1.null을 int로 형변환 할 때 오류
+		//2. sum+null에서 오류
+		//3. null의 필드가 없는데 참조해서 오류(0)
+		System.out.println(sum);
+		numList.stream()
+			.filter(i->i!=null) ///filter(중간연산):검사식에서true를 반환하는 값만 stream으로 다시 반환
+			.forEach((i)->{sum2+=i;});
+		System.out.println(sum2);
+		//파일 입출력(문자열 입출력, 바이너리코드 입출력)
+	}
+
+}

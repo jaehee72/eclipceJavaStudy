@@ -1,0 +1,45 @@
+package java_study2.co.kr.jungbu;
+
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+@FunctionalInterface
+interface Func<T,R>{
+	R appy(T t);//추상메소드
+}
+
+
+
+public class L12Lamda {
+
+	public static void main(String[] args) {
+		//javscript 람다식 : function(){}함수 => 프로토 타입(타입), class(문법적 설탕 ==function), ()=>{}람다식 함수(타입이 존재하지않는)
+		//function Calc(a,b) {this.a=a; this.b=b, this.sum=function(){}} let calc= new Calc();
+		//Java(객체지향언어) 람다식: 함수가 하나 있는 객체의 매개변수 대신에 간편하게 작성하는 문법적 설탕
+		Function<Integer, Long> square=(i)->{return(long)i*i;}; //Function 은 매개변수가 하나있고 반환하는 것이 있음
+		Function<Integer, Long> square2=new Function<Integer, Long>(){
+
+			@Override
+			public Long apply(Integer t) {
+				long result = t*t;
+				return null;
+			}
+			
+		};
+		BiFunction<Integer, Integer, Long> sum=(i,i2)->{return (long)(i+12);};
+		System.out.println(sum.apply(40,100));
+		Consumer<Integer> squarePrint=(i)->{}; //매개변수 1개만 존재하는 함수.
+		squarePrint.accept(133);
+		//Predicate(검사식) : 매개변수와 변환하는 값이 있는데 반환하는 값의 타입은 무조건 boolean
+		Predicate<String> nullCheck=(s)->{return s!=null;};
+		//Supplier : 반환하는 것만 있는 함수 정의
+		Supplier<Integer> randomNum=()->{return (int)(Math.random()*10)+1;};
+		System.out.println(randomNum.get());
+	}
+
+}
+
+//기술에 대한 질문 (객체지향에 대한 질문+ 데이터베이스 설계) + 영어시험(반복문 검사, 성능 문제 if -> switch,영어로 프로젝트 진행 방향 대답)
+// 플젝 -> 질문(기본)

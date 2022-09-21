@@ -1,0 +1,12 @@
+package java_study2.co.kr.jungbu;
+
+import java.io.FileReader;
+
+public class L23FileReader {
+
+	public static void main(String[] args) {
+		FileReader fr = null; //문자열로 작성된 파일을 불러오는 객체
+		BufferedReader br = null;
+	}
+
+}

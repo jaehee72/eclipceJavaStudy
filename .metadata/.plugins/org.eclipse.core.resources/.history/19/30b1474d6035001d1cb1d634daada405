@@ -1,0 +1,24 @@
+package java_study2.co.kr.jungbu;
+
+
+public class L08Thread {
+
+	public static void main(String[] args) {
+		//스레드(Thread) : 실행단위(일꾼), main 메소드가 1개 가지고 있다. (순차적 언어 main에 작성한 코드가 순서대로 1개씩 실행되는 것)
+		System.out.println("첫번째");
+		System.out.println("두번째");
+		System.out.println("세번째");
+		boolean start= true;
+		while(true) {
+			System.out.println(LocalTime.now());
+			try {
+				Thread.sleep(1000);
+				catch(InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		System.out.println("네번째");
+	}
+
+}

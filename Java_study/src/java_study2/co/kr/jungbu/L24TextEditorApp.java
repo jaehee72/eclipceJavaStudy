@@ -1,0 +1,71 @@
+package java_study2.co.kr.jungbu;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JTextArea;
+class TextEditor extends JFrame{
+	JTextArea ta;
+	JMenuBar mb;
+	JMenu menu;
+	JMenuItem miNew;
+	JMenuItem miOpen;
+	JMenuItem miSave;
+	JMenuItem miExit;
+	public TextEditor() {
+		super("텍스트 편집기");//super:부모 접근 지정자
+	ta =new JTextArea();
+	mb = new JMenuBar();
+	menu = new JMenu();
+	miNew= new JMenuItem("새로 만들기");
+	miOpen= new JMenuItem("열기");
+	miSave= new JMenuItem("저장");
+	miExit= new JMenuItem("끝내기");
+	menu.add(miNew);
+	menu.add(miOpen);
+	menu.add(miSave);
+	menu.add(miExit);
+	mb.add(menu);
+//	this.add(mb);
+	this.setJMenuBar(mb);
+	this.add(ta);
+	this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	miOpen.addActionListener((e)->{
+
+		JFileChooser fileChooser= new JFileChooser();
+		int option=fileChooser.showOpenDialog(this);
+		if(option==JFileChooser.APPROVE_OPTION) { //파일이 선택됨
+			File file = fileChooser.getSelectedFile();
+			try {
+				Scanner scanner =new Scanner(file);
+				while(scanner.hasNext()) {
+					String line = scanner.nextLine();
+					System.out.println(line);
+					ta.append(line+"\n");
+				}
+			} catch(FileNotFoundException e1) {
+				e1.printStackTrace();
+			}
+		}
+		});
+	}
+}
+
+public class L24TextEditorApp {
+
+	public static void main(String[] args) {
+//		JFrame f =new JFrame();
+//		f.setBounds(2000,10,400,400);
+//		f.setVisible(true);
+		TextEditor editor = new TextEditor();
+		editor.setBounds(0,0,400,400);
+		editor.setVisible(true);
+	}
+
+}

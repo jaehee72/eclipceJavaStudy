@@ -1,0 +1,15 @@
+package java_study2.co.kr.jungbu;
+
+import javax.swing.JFrame;
+class TextEditor{
+	
+}
+public class L24TextEditorApp {
+
+	public static void main(String[] args) {
+		JFrame f =new JFrame();
+		f.setBounds(2000,10,400,400);
+		f.setVisible(true);
+	}
+
+}

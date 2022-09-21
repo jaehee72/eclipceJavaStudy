@@ -1,0 +1,39 @@
+package java_study2.co.kr.jungbu;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class L14StreamAPI {
+	static int foreachSum;
+	public static void main(String[] args) {
+		//IOStream : 통신을 할 때 흐름(입력 방향, 출력 방향)
+		//StreamAPI : 모든 자료구조를 통일	하기 위해 존재(흐름이 있는 자료 구조)
+		
+		List<Integer> numList=new ArrayList<Integer>();
+		numList.add(500);
+		numList.add(55);
+		numList.add(5);
+		numList.add(555);
+		numList.add(1);
+		numList.add(3);
+		numList.add(-300);
+		//numList의 모든 값 더하기
+		int sum=0;
+		for(int i =0; i<numList.size();i++) {
+			int num=numList.get(i);
+			sum += num;
+		}
+		System.out.println("for 반복문 결과: "+sum);
+		sum =0;
+		for(int num : numList) {//java의 배열과 관련된 자료구조는 Iterator 정렬을 하기 때문에 향상된 for문을 사용할 수 있다.
+			sum+=num;
+		}
+		System.out.println("향상된 for반복문 결과: "+sum);
+		//내부 반복문 -> js List를 흉내낸
+		sum=0;
+		
+		numList.forEach((num)->{foreachSum+=num;}); //Consumer 람다식 : 매개변수만 존재
+		System.out.println("내부 반복문 for each 결과: "+foreachSum);
+		
+	}
+}

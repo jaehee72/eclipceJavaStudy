@@ -1,0 +1,11 @@
+package java_study2.co.kr;
+public class JFrame {
+
+	public static void main(String[] args) {
+		//JFrame Swing GUI 를 제공하는 객체
+		JFrame frame = new JFrame();
+		frame.setBounds(100,300,100,100);
+		frame.setVisible(true);
+	}
+
+}

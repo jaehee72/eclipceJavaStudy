@@ -1,0 +1,14 @@
+package java_study2.co.kr.jungbu;
+
+import javax.swing.JFrame;
+
+public class L11Swing {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JFrame frame = new JFrame();
+		frame.setBounds(100,300,100,100);
+		frame.setVisible(true);
+	}
+
+}

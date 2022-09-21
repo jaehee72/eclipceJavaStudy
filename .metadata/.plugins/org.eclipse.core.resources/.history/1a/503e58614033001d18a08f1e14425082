@@ -1,0 +1,24 @@
+package ch03.ex03.case01;
+
+public class MyCar implements SmartCar{
+	private Smart Car software;
+	
+	public MyCar(SmartCar software) {		//has a 관계
+		this.software = software;
+	}
+
+	@Override
+	public void start() {
+		System.out.println("MyCar start.");
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("MyCar stop.");
+	}
+
+	@Override
+	public void klaxon() {
+		System.out.println("MyCar klaxon.");
+	}
+}

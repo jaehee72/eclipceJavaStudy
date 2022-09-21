@@ -1,0 +1,31 @@
+package ch04.ex03.quiz;
+
+import java.util.Scanner;
+
+public class Quiz02 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner (System.in);
+		int e = 0;
+		int num = sc.nextInt();
+		for(;;) {
+			e++;
+			if(num==1) 
+				System.out.print("입력 페이지입니다.");
+			else if(num==2) 
+				System.out.print("출력 페이지입니다.");
+			else if (num==3)
+				System.out.println("수정 페이지입니다.");
+			else if(num==4)
+				System.out.println("삭제 페이지입니다.");
+			else
+				System.out.println("프로그램 종료");
+			if(num==0) break;
+		
+	}
+	}
+}
+
+
+	

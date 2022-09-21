@@ -1,0 +1,11 @@
+Q1. case01 패키지를 생성해, 아래 내용을 수행하세요.
+	1)Template 클래스 생성(추상 클래스)
+	-추상 메소드: input(object[] o), output(),modify(), delete()
+	-Scanner, int cnt =0 ;
+	2) Score 클래스 생성
+	- 필드: 국어, 영어, 수학, 총점, 평균
+	3) ScoreMain 클래스 생성
+	- 메뉴 : 입력, 출력, 수정, 삭제
+	- Score[] s =new Score[5];
+	4) ScoreService 클래스 생성
+	-Template 클래스 상속받아 구현
